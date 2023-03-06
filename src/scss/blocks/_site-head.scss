@@ -1,0 +1,36 @@
+.site-head {
+  display: flex;
+  flex-wrap: wrap;
+
+  // This centers the two elements vertically
+  // when they are adjacent to each other.
+  align-items: center;
+
+  padding: var(--space-l);
+
+  @media only screen and (min-width: var(--xl)) {
+    gap: var(--space-3xl);
+    flex-direction: column;
+    padding-inline-end: 0;
+  }
+
+  // Target all direct child elements and allow them to grow
+  & > * {
+    flex-grow: 1;
+  }
+
+  &__logo {
+    width: clamp(6rem, 5.714rem + 1.43vw, 7rem);
+    max-width: 7rem;
+    position: relative;
+    flex-shrink: 0;
+    margin-inline-end: var(--space-3xl);
+  }
+}
+
+.devils-albatross {
+  flex-grow: 666;
+
+  // Substract 100% from a chosen threshold
+  flex-basis: calc((22rem - 100%) * 666);
+}

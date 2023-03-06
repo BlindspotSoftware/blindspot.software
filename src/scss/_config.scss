@@ -1,0 +1,106 @@
+/**
+  * SIZE SCALE
+  * This is a Perfect Fourth scale that powers all the utilities that
+  * it is relevant for (font-size, margin, padding). All items are
+  * calcuated off the base size, so change that and cascade across
+  * your whole project.
+  */
+
+// @link https://utopia.fyi/type/calculator?c=320,16,1.2,1140,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l
+$gorko-size-scale: (
+  /* 16 - 18 */ 'step-0': clamp(1rem, calc(0.96rem + 0.18vw), 1.13rem),
+  /* 18 - 36 */ 'step-1': clamp(1.13rem, calc(0.8rem + 1.61vw), 2.25rem),
+  /* 20 - 72 */ 'step-2': clamp(1.25rem, calc(0.32rem + 4.64vw), 4.5rem)
+);
+
+// @link https://utopia.fyi/space/calculator?c=320,16,1.067,1440,38,2,2,0,&s=,1.6|2.5|7.5,s-l&g=s,l,xl,12
+$space-size-scale: (
+  // T-Shirt Sizes
+  '2xs': clamp(0.38rem, calc(0.21rem + 0.8vw), 0.94rem),
+  'xs': clamp(0.69rem, calc(0.42rem + 1.34vw), 1.63rem),
+  's': clamp(1rem, calc(0.61rem + 1.96vw), 2.38rem),
+  'm': clamp(1.63rem, calc(1rem + 3.13vw), 3.81rem),
+  'l': clamp(2.5rem, calc(1.52rem + 4.91vw), 5.94rem),
+  'xl': clamp(7.5rem, calc(4.55rem + 14.73vw), 17.81rem),
+  // One-up pairs
+  '2xs-xs': clamp(0.38rem, calc(0.02rem + 1.79vw), 1.63rem),
+  'xs-s': clamp(0.69rem, calc(0.21rem + 2.41vw), 2.38rem),
+  's-m': clamp(1rem, calc(0.2rem + 4.02vw), 3.81rem),
+  'm-l': clamp(1.63rem, calc(0.39rem + 6.16vw), 5.94rem),
+  'l-xl': clamp(2.5rem, calc(-1.87rem + 21.88vw), 17.81rem)
+);
+
+/**
+  * COLORS
+  * Colors are shared between backgrounds and text by default.
+  * You can also use them to power borders, fills or shadows, for example.
+  */
+$gorko-colors: (
+  'dark-blue': #111121,
+  'red': #eb5757,
+  'orange': #e9764e,
+  'violet': #be5de2,
+  'turquoise': #24deac,
+  'white': #fff,
+);
+
+/**
+  * CORE CONFIG
+  * This powers everything from utility class generation to breakpoints
+  * to enabling/disabling pre-built components/utilities.
+  */
+$gorko-config: (
+  'css-vars': (
+    'color': $gorko-colors,
+    'space': $space-size-scale,
+    'text': $gorko-size-scale,
+  ),
+  'bg': (
+    'items': 'color',
+    'css-vars': true,
+    'output': 'standard',
+    'property': 'background-color',
+  ),
+  'color': (
+    'items': 'color',
+    'css-vars': true,
+    'output': 'standard',
+    'property': 'color',
+  ),
+  'font': (
+    'items': (
+      'base': '"OuterSans", sans-serif;',
+    ),
+    'output': 'standard',
+    'property': 'font-family',
+  ),
+  'leading': (
+    'items': (
+      'loose': 1.7,
+      'tight': 1.25,
+      'flat': 1.1,
+    ),
+    'output': 'standard',
+    'property': 'line-height',
+  ),
+  'text': (
+    'items': 'text',
+    'css-vars': true,
+    'output': 'standard',
+    'property': 'font-size',
+  ),
+  'weight': (
+    'items': (
+      'light': 300,
+      'regular': 400,
+      'bold': 700,
+    ),
+    'output': 'standard',
+    'property': 'font-weight',
+  ),
+  'breakpoints': (
+    /* 680px  */ 'md': '(min-width: 42.5em)',
+    /* 1024px */ 'lg': '(min-width: 64em)',
+    /* 1440px */ 'xl': '(min-width: 90em)',
+  ),
+);

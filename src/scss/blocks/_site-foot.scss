@@ -1,0 +1,39 @@
+.site-foot {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-s);
+  padding: var(--space-l);
+
+  @media only screen and (min-width: 27em) and (max-width: 129em) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media only screen and (min-width: 130em) {
+    background-color: transparent;
+    flex-direction: row;
+  }
+
+  &__nav {
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: var(--color-turquoise);
+      }
+
+      &:focus-within {
+        outline-offset: 4px;
+        outline: 2px dashed currentColor;
+      }
+    }
+  }
+
+  &__logo {
+    svg {
+      width: 7rem;
+    }
+  }
+}

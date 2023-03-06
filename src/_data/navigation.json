@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "text": "product",
+      "url": "/#product"
+    },
+    {
+      "text": "about",
+      "url": "/#about"
+    },
+    {
+      "text": "contact",
+      "url": "/#contact"
+    }
+  ]
+}

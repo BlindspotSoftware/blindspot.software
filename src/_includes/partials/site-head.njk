@@ -1,0 +1,15 @@
+<header class="site-head">
+  <a href="/" class="site-head__logo">{% include "svg/logo.svg" %}</a>
+  <div class="devils-albatross"></div>
+  <nav aria-label="Main">
+    <ul class="cluster" role="list">
+      {% for item in navigation.items %}
+        <li>
+          <a class="weight-light" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>
+            {{ item.text }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

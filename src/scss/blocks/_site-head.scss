@@ -1,12 +1,9 @@
 .site-head {
   display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
   flex-wrap: wrap;
-
-  // This centers the two elements vertically
-  // when they are adjacent to each other.
-  align-items: center;
-
-  padding: var(--space-l);
+  padding: var(--space-m);
 
   @media only screen and (min-width: var(--xl)) {
     gap: var(--space-3xl);
@@ -25,6 +22,10 @@
     position: relative;
     flex-shrink: 0;
     margin-inline-end: var(--space-3xl);
+  }
+
+  & a:hover:not(&__logo) {
+    color: var(--color-turquoise);
   }
 }
 

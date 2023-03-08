@@ -3,8 +3,8 @@
 }
 
 .text-block {
-  max-width: 56ch;
   margin-inline: auto;
+  max-width: var(--text-block-width, 56ch);
 }
 
 span[unselectable] {
@@ -45,7 +45,7 @@ span[unselectable] {
 }
 
 .braces {
-  --gap: 1em;
+  --gap: 0;
   &::before,
   &::after {
     vertical-align: 0.05em;
@@ -59,6 +59,14 @@ span[unselectable] {
 .braces::after {
   content: '}';
   margin-inline-start: var(--gap);
+}
+
+.preview-image {
+  margin-inline: auto;
+}
+
+.text-block-m {
+  max-width: 40ch;
 }
 
 .profile-picture {
@@ -82,7 +90,7 @@ span[unselectable] {
     bottom: 0;
     background-color: var(--color-violet);
     opacity: 0;
-    border-radius: 50% 0 50% 50%;
+    border-radius: inherit;
     transition: opacity 0.5s ease-in-out;
     font-size: clamp(1rem, 0.857rem + 0.71vw, 1.5rem);
     line-height: 1;
@@ -99,9 +107,13 @@ span[unselectable] {
   gap: var(--space-2xs);
 
   & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     width: var(--space-s);
     aspect-ratio: 1/1;
     background-color: var(--color-dark-blue);
+    color: var(--color-turquoise);
   }
 }

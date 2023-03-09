@@ -1,6 +1,7 @@
 <header class="site-head">
-  <a href="/" class="site-head__logo">{% include "svg/logo.svg" %}</a>
-  <div class="devils-albatross"></div>
+  <a href="#main-content" class="skip-link btn">Skip to content</a>
+  <a href="/" class="site-head__logo" aria-label="blindspot home">{% include "svg/logo.svg" %}</a>
+  <div class="devils-albatross" aria-hidden="true"></div>
   <nav aria-label="Main">
     <ul class="cluster" style="--cluster-justification: center" role="list">
       {% for item in navigation.items %}

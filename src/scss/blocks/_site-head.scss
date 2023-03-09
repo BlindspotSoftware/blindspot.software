@@ -1,19 +1,19 @@
 .site-head {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: var(--space-xs);
   flex-wrap: wrap;
   padding: var(--space-m);
 
-  @media only screen and (min-width: var(--xl)) {
-    gap: var(--space-3xl);
-    flex-direction: column;
-    padding-inline-end: 0;
-  }
-
   // Target all direct child elements and allow them to grow
   & > * {
     flex-grow: 1;
+  }
+  .devils-albatross {
+    flex-grow: 666;
+    // Substract 100% from a chosen threshold
+    flex-basis: calc((22rem - 100%) * 666);
   }
 
   &__logo {
@@ -24,14 +24,12 @@
     margin-inline-end: var(--space-3xl);
   }
 
-  & a:hover:not(&__logo) {
+  & a:hover:not(&__logo, .skip-link) {
     color: var(--color-turquoise);
   }
-}
 
-.devils-albatross {
-  flex-grow: 666;
-
-  // Substract 100% from a chosen threshold
-  flex-basis: calc((22rem - 100%) * 666);
+  & a:focus-visible {
+    outline-offset: 4px;
+    outline: 2px dashed var(--color-orange);
+  }
 }

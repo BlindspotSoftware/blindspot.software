@@ -1,3 +1,8 @@
+h1,
+h2 {
+  text-transform: lowercase;
+}
+
 .site-content {
   text-align: center;
 }
@@ -7,7 +12,10 @@
   max-width: var(--text-block-width, 56ch);
 }
 
-span[unselectable] {
+// Elements with this attribute cannot be selected nor dragged
+[unselectable] {
+  -webkit-user-drag: none;
+  user-drag: none;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -18,29 +26,49 @@ span[unselectable] {
 
 .btn {
   display: inline-block;
+  position: relative;
   background-color: var(--color-turquoise);
   padding-inline: var(--space-m);
   padding-block: var(--space-2xs);
+  text-transform: lowercase;
   border-radius: 2em;
 
+  &::before,
+  &::after {
+    position: absolute;
+    padding-inline: var(--braces-gap, 0.5em);
+    transition: padding-inline 0.075s ease;
+  }
   &::before {
-    content: '< ';
-    vertical-align: -0.055em;
+    content: '<';
+    transform: translateX(-100%);
   }
   &::after {
-    content: ' >';
-    vertical-align: -0.055em;
+    content: '>';
+  }
+
+  &:hover {
+    --braces-gap: 0.75em;
+    background-color: var(--color-turquoise-darker);
+    transition: background-color 0.075s ease;
+  }
+
+  &:focus-visible {
+    outline-offset: 6px;
+    outline: 2px dashed var(--color-orange);
   }
 }
 
 .double-arrow {
   display: inline-block;
   width: 1.75em;
+  margin-inline-start: -1.75em;
   vertical-align: -0.15em;
 }
 .bottom-line {
   display: inline-block;
   width: 1.5em;
+  margin-inline-end: -1.5em;
   vertical-align: bottom;
 }
 
@@ -65,10 +93,6 @@ span[unselectable] {
   margin-inline: auto;
 }
 
-.text-block-m {
-  max-width: 40ch;
-}
-
 .profile-picture {
   position: relative;
   border-radius: 50%;
@@ -91,29 +115,37 @@ span[unselectable] {
     background-color: var(--color-violet);
     opacity: 0;
     border-radius: inherit;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
     font-size: clamp(1rem, 0.857rem + 0.71vw, 1.5rem);
     line-height: 1;
     letter-spacing: 5;
 
-    &:hover {
+    &:hover,
+    &:focus-within,
+    &:focus-visible {
       opacity: 1;
     }
+    &:focus-visible {
+      outline-offset: 6px;
+      outline: 2px dashed var(--color-orange);
+    }
   }
-}
 
-.social-icons {
-  display: flex;
-  gap: var(--space-2xs);
+  &__social-icons {
+    & a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: var(--space-s);
+      height: var(--space-s);
+      background-color: var(--color-dark-blue);
+      color: var(--color-turquoise);
+      border-radius: 50%;
 
-  & a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    width: var(--space-s);
-    aspect-ratio: 1/1;
-    background-color: var(--color-dark-blue);
-    color: var(--color-turquoise);
+      &:focus-visible {
+        outline-offset: 4px;
+        outline: 2px dashed var(--color-white);
+      }
+    }
   }
 }

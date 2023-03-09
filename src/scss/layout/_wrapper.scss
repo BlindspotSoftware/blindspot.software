@@ -4,11 +4,6 @@
  * centers the contents
  */
 .wrapper {
-  max-width: 65.5rem;
+  width: min(100% - calc(2 * var(--space-m)), var(--container-max, 65.5rem));
   margin-inline: auto;
-  padding-inline: var(--space-m);
-
-  @media screen and (min-width: 57em) {
-    padding-inline: 0;
-  }
 }

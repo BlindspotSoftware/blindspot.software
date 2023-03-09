@@ -5,18 +5,15 @@
   gap: var(--space-s);
   padding: var(--space-m);
 
-  @media only screen and (min-width: 27em) and (max-width: 129em) {
+  @media (min-width: 27em) {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
   }
 
-  @media only screen and (min-width: 130em) {
-    background-color: transparent;
-    flex-direction: row;
-  }
-
   &__nav {
+    line-height: 1.75;
+
     a {
       text-decoration: none;
 
@@ -24,9 +21,9 @@
         color: var(--color-turquoise);
       }
 
-      &:focus-within {
-        outline-offset: 4px;
-        outline: 2px dashed currentColor;
+      &:focus-visible {
+        outline-offset: 3px;
+        outline: 2px dashed var(--color-orange);
       }
     }
   }

@@ -24,11 +24,11 @@
     margin-inline-end: var(--space-3xl);
   }
 
-  & a:hover:not(&__logo, .skip-link) {
+  a:hover:not(&__logo) {
     color: var(--color-turquoise);
   }
 
-  & a:focus-visible {
+  a:focus-visible {
     outline-offset: 4px;
     outline: 2px dashed var(--color-orange);
   }

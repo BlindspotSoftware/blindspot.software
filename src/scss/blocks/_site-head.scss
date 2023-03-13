@@ -24,12 +24,19 @@
     margin-inline-end: var(--space-3xl);
   }
 
-  & a:hover:not(&__logo) {
-    color: var(--color-turquoise);
-  }
+  li {
+    a {
+      text-decoration: none;
 
-  & a:focus-visible {
-    outline-offset: 4px;
-    outline: 2px dashed var(--color-orange);
+      &:hover {
+        color: var(--color-turquoise);
+        transition: color 0.075s ease;
+      }
+
+      &:focus-visible {
+        outline-offset: 4px;
+        outline: 2px dashed var(--color-orange);
+      }
+    }
   }
 }

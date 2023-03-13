@@ -1,36 +1,44 @@
 .site-foot {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: var(--space-s);
+  align-items: center;
+  gap: var(--space-m);
   padding: var(--space-m);
-
-  @media (min-width: 27em) {
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-  }
 
   &__nav {
     line-height: 1.75;
+  }
 
+  &__logo {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    order: -1;
+
+    svg {
+      width: 7rem;
+    }
+
+    @media (min-width: 32em) {
+      flex: initial;
+      order: initial;
+    }
+  }
+
+  li {
     a {
       text-decoration: none;
 
       &:hover {
         color: var(--color-turquoise);
+        transition: color 0.075s ease;
       }
 
       &:focus-visible {
         outline-offset: 3px;
         outline: 2px dashed var(--color-orange);
       }
-    }
-  }
-
-  &__logo {
-    svg {
-      width: 7rem;
     }
   }
 }

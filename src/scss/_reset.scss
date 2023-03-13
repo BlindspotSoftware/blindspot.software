@@ -43,7 +43,7 @@ body {
 
 /* Default link styles */
 a {
-  text-decoration: none;
+  text-decoration-skip-ink: auto;
   color: inherit;
   cursor: pointer;
 }

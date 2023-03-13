@@ -10,128 +10,43 @@ permalink: /
     <a class="btn" href="#">see more</a>
   </section>
 
-  <section class="text-block stack-s">
-    <h2 class="text-step-1 weight-bold braces">What we do</h2>
-    <p class="text-step-0 weight-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur commodi accusamus accusantium voluptatibus nihil. Saepe expedita voluptate adipisci totam tenetur corporis laborum delectus animi deserunt, nostrum, et, sint corrupti dolore. Pariatur sed obcaecati alias fuga expedita inventore aperiam iusto nobis delectus voluptates maxime sapiente, quo recusandae temporibus magnam ab consequatur?</p>
-    <div class="cluster" style="--cluster-justification: center; --cluster-gap: var(--space-xs)">
-      <img src="/images/chip.svg" alt="Gallery image 1" unselectable>
-      <img src="/images/chip.svg" alt="Gallery image 2" unselectable>
-      <img src="/images/chip.svg" alt="Gallery image 3" unselectable>
+  <section class="stack-s">
+    <div class="text-block | stack-s">
+      <h2 class="text-step-1 weight-bold braces">What we do</h2>
+      <p class="text-step-0 weight-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur commodi accusamus accusantium voluptatibus nihil. Saepe expedita voluptate adipisci totam tenetur corporis laborum delectus animi deserunt, nostrum, et, sint corrupti dolore. Pariatur sed obcaecati alias fuga expedita inventore aperiam iusto nobis delectus voluptates maxime sapiente, quo recusandae temporibus magnam ab consequatur?</p>
+    </div>
+    <div class="cluster | unselectable" style="--cluster-justification: center; --cluster-gap: var(--space-xs)">
+      <img class="placeholder" src="/images/chip.svg" alt="Gallery image 1">
+      <img class="placeholder" src="/images/chip.svg" alt="Gallery image 2">
+      <img class="placeholder" src="/images/chip.svg" alt="Gallery image 3">
     </div>
   </section>
 
   <section class="stack-s" id="product">
-    <div class="text-block stack-s">
+    <div class="text-block | stack-s">
       <h2 class="text-step-1 weight-bold braces">Our product</h2>
       <p class="text-step-0 weight-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur commodi accusamus accusantium voluptatibus nihil. Saepe expedita voluptate adipisci totam tenetur corporis laborum delectus animi deserunt, nostrum, et, sint corrupti dolore. Pariatur sed obcaecati alias fuga expedita inventore aperiam iusto nobis delectus voluptates maxime sapiente, quo recusandae temporibus magnam ab consequatur?</p>
     </div>
     <figure class="stack-s my-stack-space-m">
-      <img class="preview-image" src="/images/firmware-ci-preview.png" alt="Preview of the product" unselectable>
+      <img class="preview-image | unselectable" src="/images/firmware-ci-preview.png" alt="Preview of the product">
       <a class="btn" href="https://www.firmware-ci.com" target="_blank" rel="noopener">www.firmware-ci.com</a>
-      <figcaption class="text-block text-step-0 weight-light" style="--text-block-width: 40ch">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis, dolor vitae beatae harum reprehenderit!</figcaption>
+      <figcaption class="text-block | text-step-0 weight-light" style="--text-block-width: 40ch">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus reiciendis, dolor vitae beatae harum reprehenderit!</figcaption>
     </figure>
   </section>
 
   <section class="stack-s" id="about">
-    <div class="text-block stack-s">
-      <h2 class="text-step-1 weight-bold braces">The team behind</h2>
+    <div class="text-block | stack-s">
+      <h2 class="braces | text-step-1 weight-bold">The team behind</h2>
       <p class="text-step-0 weight-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur commodi accusamus accusantium voluptatibus nihil. Saepe expedita voluptate adipisci totam tenetur corporis laborum delectus animi deserunt, nostrum, et, sint corrupti dolore. Pariatur sed obcaecati alias fuga expedita inventore aperiam iusto nobis delectus voluptates maxime sapiente, quo recusandae temporibus magnam ab consequatur?</p>
     </div>
 
-    <div class="cluster my-stack-space-m" style="--cluster-justification: center; --cluster-gap: var(--space-s)">
-      <div class="profile-picture">
-        <img class="profile-picture__portrait" src="/images/jens-drenhaus.webp" alt="" unselectable/>
-        <div class="profile-picture__overlay" tabindex="0">
-          <p class="weight-bold">Jens <br/>Drehnhaus</p>
-          <ul class="profile-picture__social-icons | cluster" style="--cluster-justification: center; --cluster-gap: var(--space-2xs)" role="list">
-            <li>
-              <a href="#" target="_blank" rel="noopener">
-                {% icon icon = "github",
-                width = "20" %}
-                <span class="sr-only">Jens Drehnhaus on GitHub</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener">
-                {% icon icon = "linkedin",
-                width = "20" %}
-                <span class="sr-only">Jens Drehnhaus on LinkedIn</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener">
-                {% icon icon = "twitter",
-                width = "20" %}
-                <span class="sr-only">Jens Drehnhaus on Twitter</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="profile-picture">
-        <img class="profile-picture__portrait" src="/images/christian-walter.webp" alt="" unselectable/>
-        <div class="profile-picture__overlay" tabindex="0">
-          <p class="weight-bold">Christian <br/>Walter</p>
-          <ul class="profile-picture__social-icons | cluster" style="--cluster-justification: center; --cluster-gap: var(--space-2xs)" role="list">
-            <li>
-              <a href="#" target="_blank" rel="noopener">
-                {% icon icon = "github",
-                width = "20" %}
-                <span class="sr-only">Christian Walter on GitHub</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener">
-                {% icon icon = "linkedin",
-                width = "20" %}
-                <span class="sr-only">Christian Walter on LinkedIn</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener">
-                {% icon icon = "twitter",
-                width = "20" %}
-                <span class="sr-only">Christian Walter on Twitter</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="profile-picture">
-        <img class="profile-picture__portrait" src="/images/christoph-lange.webp" alt="" unselectable/>
-        <div class="profile-picture__overlay" tabindex="0">
-          <p class="weight-bold">Christoph <br/>Lange</p>
-          <ul class="profile-picture__social-icons cluster" style="--cluster-justification: center; --cluster-gap: var(--space-2xs)" role="list">
-            <li>
-              <a href="#" target="_blank" rel="noopener">
-                {% icon icon = "github",
-                width = "20" %}
-                <span class="sr-only">Christoph Lange on GitHub</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener">
-                {% icon icon = "linkedin",
-                width = "20" %}
-                <span class="sr-only">Christoph Lange on LinkedIn</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener">
-                {% icon icon = "twitter",
-                width = "20" %}
-                <span class="sr-only">Christoph Lange on Twitter</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+    <div class="cluster | my-stack-space-m" style="--cluster-justification: center; --cluster-gap: var(--space-s)">
+      {% include "partials/team.njk" %}
+    </section>
 
-  <section class="text-block stack-s" id="contact">
-    <h2 class="text-step-1 weight-bold braces">Contact</h2>
-    <p class="text-step-0 weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus quibusdam, in temporibus debitis quos aliquam expedita non, pariatur, corporis consequatur asperiores dolorem eos unde minima.</p>
-    <a class="btn" href="#">Write us an email</a>
-  </section>
-</div>
+    <section class="text-block | stack-s" id="contact">
+      <h2 class="braces | text-step-1 weight-bold">Contact</h2>
+      <p class="text-step-0 weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus quibusdam, in temporibus debitis quos aliquam expedita non, pariatur, corporis consequatur asperiores dolorem eos unde minima.</p>
+      <a class="btn" href="#">Write us an email</a>
+    </section>
+  </div>

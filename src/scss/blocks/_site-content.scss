@@ -12,18 +12,6 @@
     max-width: var(--text-block-width, 56ch);
   }
 
-  // Elements with this attribute cannot be selected nor dragged
-  [unselectable] {
-    -webkit-user-drag: none;
-    user-drag: none;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
   .btn {
     display: inline-block;
     position: relative;
@@ -31,6 +19,7 @@
     padding-inline: var(--space-m);
     padding-block: var(--space-2xs);
     text-transform: lowercase;
+    text-decoration: none;
     border-radius: 2em;
 
     &::before,
@@ -93,60 +82,7 @@
     margin-inline: auto;
   }
 
-  .profile-picture {
-    position: relative;
-    border-radius: 50%;
-
-    &__portrait {
-      width: clamp(10rem, 8.286rem + 8.57vw, 16rem);
-      border-radius: inherit;
-    }
-
-    &__overlay {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: var(--space-2xs);
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      bottom: 0;
-      background-color: var(--color-violet);
-      opacity: 0;
-      border-radius: inherit;
-      transition: opacity 0.25s ease-in-out;
-      font-size: clamp(1rem, 0.857rem + 0.71vw, 1.5rem);
-      line-height: 1;
-      letter-spacing: 5;
-
-      &:hover,
-      &:focus-within,
-      &:focus-visible {
-        opacity: 1;
-      }
-      &:focus-visible {
-        outline-offset: 6px;
-        outline: 2px dashed var(--color-orange);
-      }
-    }
-
-    &__social-icons {
-      & a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: var(--space-s);
-        height: var(--space-s);
-        background-color: var(--color-dark-blue);
-        color: var(--color-turquoise);
-        border-radius: 50%;
-
-        &:focus-visible {
-          outline-offset: 4px;
-          outline: 2px dashed var(--color-white);
-        }
-      }
-    }
+  .placeholder {
+    width: 13rem;
   }
 }

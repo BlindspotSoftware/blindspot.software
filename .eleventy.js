@@ -26,6 +26,7 @@ module.exports = (config) => {
 
   // Add Shortcodes
   config.addShortcode('icon', require('./src/shortcodes/icon.js'));
+  config.addShortcode('picture', require('./src/shortcodes/picture.js'));
 
   // Only minify HTML if we are in production because it slows builds _right_ down
   if (isProduction) {

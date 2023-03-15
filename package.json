@@ -4,9 +4,9 @@
   "description": "Boilerplate for basic 11ty page",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "npx gulp && concurrently 'npx gulp watch' 'npx eleventy --serve'",
-    "production": "NODE_ENV=production npx gulp production && NODE_ENV=production npx eleventy",
-    "start-production": "NODE_ENV=production npx gulp && NODE_ENV=production concurrently 'npx gulp watch' 'npx eleventy --serve'"
+    "start": "npx sass src/scss:src/_includes/css && concurrently 'npx sass src/scss:src/_includes/css --watch' 'npx eleventy --serve'",
+    "production": "npx sass src/scss:src/_includes/css && NODE_ENV=production npx eleventy",
+    "start-production": "npx sass src/scss:src/_includes/css && NODE_ENV=production concurrently 'npx sass src/scss:src/_includes/css --watch' 'npx eleventy --serve'"
   },
   "keywords": [],
   "author": "",
@@ -30,9 +30,6 @@
     "concurrently": "^6.1.0",
     "dotenv": "^10.0.0",
     "gorko": "^0.9.1",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^5.1.0",
-    "gulp-svgmin": "^4.1.0",
     "html-minifier": "^4.0.0",
     "jsdom": "^19.0.0",
     "markdown-it": "^12.3.2",
@@ -40,8 +37,7 @@
     "sass": "^1.45.2"
   },
   "devDependencies": {
-    "gulp-postcss": "^9.0.1",
-    "gulp-svgstore": "^9.0.0",
+    "eleventy-plugin-svg-sprite": "^2.3.0",
     "postcss-preset-env": "^7.4.3"
   }
 }

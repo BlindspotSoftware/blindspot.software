@@ -24,19 +24,17 @@
     margin-inline-end: var(--space-3xl);
   }
 
-  li {
-    a {
-      text-decoration: none;
+  a {
+    text-decoration: none;
 
-      &:hover {
-        color: var(--color-turquoise);
-        transition: color 0.075s ease;
-      }
+    &:hover:not(.site-head__logo) {
+      color: var(--color-turquoise);
+      transition: color 0.075s ease;
+    }
 
-      &:focus-visible {
-        outline-offset: 4px;
-        outline: 2px dashed var(--color-orange);
-      }
+    &:focus-visible {
+      outline-offset: 4px;
+      outline: 2px dashed var(--color-orange);
     }
   }
 }

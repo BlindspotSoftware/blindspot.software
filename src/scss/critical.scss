@@ -4,8 +4,22 @@
 @import '../../node_modules/gorko/gorko.scss';
 @import 'reset';
 
+// Global styles start
+:root {
+  --color-mode: 'light';
+}
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+}
+*/
 body {
   @include apply-utility('font', 'base');
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease-in-out, color 0.2s ease;
 }
 
 h1,
@@ -29,3 +43,4 @@ h4 {
 @import 'blocks/site-content';
 @import 'blocks/person';
 @import 'blocks/site-foot';
+@import 'blocks/dark-light-switch';

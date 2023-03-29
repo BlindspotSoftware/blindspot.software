@@ -46,6 +46,16 @@ $gorko-colors: (
   'white': #fff,
 );
 
+$light-colors: (
+  'text': map-get($gorko-colors, 'dark-blue'),
+  'bg': map-get($gorko-colors, 'light-gray'),
+);
+
+$dark-colors: (
+  'text': map-get($gorko-colors, 'light-gray'),
+  'bg': map-get($gorko-colors, 'dark-blue'),
+);
+
 /**
   * CORE CONFIG
   * This powers everything from utility class generation to breakpoints
@@ -54,6 +64,31 @@ $gorko-colors: (
 $gorko-config: (
   'css-vars': (
     'color': $gorko-colors,
+    'themes': (
+      'default': (
+        'tokens': (
+          'color': $light-colors,
+        ),
+      ),
+      'dark': (
+        'prefers-color-scheme': 'dark',
+        'tokens': (
+          'color': $dark-colors,
+        ),
+      ),
+      'dark-toggle': (
+        'prefix': ':root[data-color-theme="dark"]',
+        'tokens': (
+          'color': $dark-colors,
+        ),
+      ),
+      'light-toggle': (
+        'prefix': ':root[data-color-theme="light"]',
+        'tokens': (
+          'color': $light-colors,
+        ),
+      ),
+    ),
     'space': $space-size-scale,
     'text': $gorko-size-scale,
   ),

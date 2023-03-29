@@ -1,6 +1,14 @@
 <header class="site-head">
   <a href="/" class="site-head__logo" aria-label="blindspot home">{% include "svg/logo.svg" %}</a>
   <div class="devils-albatross" aria-hidden="true"></div>
+
+  <div class="user-toggle">
+    <div role="status" class="sr-only | js-mode-status"></div>
+    <button class="toggle-button js-mode-toggle" type="button" tabindex="0" role="switch" aria-checked="false">
+      <span class="sr-only toggle-button__text js-mode-toggle-text">Enable dark mode</span>
+    </button>
+  </div>
+
   <nav aria-label="Main">
     <ul class="cluster" style="--cluster-justification: center" role="list">
       {% for item in navigation.items %}

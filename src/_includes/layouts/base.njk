@@ -31,6 +31,8 @@
   <body class="stack-l">
     {% include "partials/site-head.njk" %}
 
+    {% include "partials/pcb-circuit.njk" %}
+
     <main class="site-content" tabindex="-1" id="main-content">
       {% block content %}
         {{ content | safe }}
@@ -43,5 +45,6 @@
     <script src="/js/ScrollTrigger.min.js"></script>
     <script src="/js/ScrollAnimation.js"></script>
     <script src="/js/darkLightSwitch.js"></script>
+    <script src="/js/pulseAnimation.js"></script>
   </body>
 </html>

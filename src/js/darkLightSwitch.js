@@ -4,6 +4,7 @@ const COLOR_MODE_KEY = '--color-mode';
 const modeToggleButton = document.querySelector('.js-mode-toggle');
 const modeToggleText = document.querySelector('.js-mode-toggle-text');
 const modeStatusElement = document.querySelector('.js-mode-status');
+const pcbLayer = document.querySelector('.pcb-layer');
 
 const getCSSCustomProp = (propKey) => {
   let response = getComputedStyle(document.documentElement).getPropertyValue(
@@ -40,8 +41,10 @@ const setButtonLabelAndStatus = (currentSetting) => {
   );
   if (currentSetting === 'dark') {
     modeToggleButton.classList.add('is-switched');
+    pcbLayer.classList.add('is-active');
   } else {
     modeToggleButton.classList.remove('is-switched');
+    pcbLayer.classList.remove('is-active');
   }
 };
 

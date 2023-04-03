@@ -8,14 +8,9 @@
 :root {
   --color-mode: 'light';
 }
-/*
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-mode: 'dark';
-  }
-}
-*/
+
 body {
+  position: relative;
   @include apply-utility('font', 'base');
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -44,3 +39,4 @@ h4 {
 @import 'blocks/person';
 @import 'blocks/site-foot';
 @import 'blocks/dark-light-switch';
+@import 'blocks/pcb-circuit';

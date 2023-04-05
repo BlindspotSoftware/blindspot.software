@@ -1,29 +1,34 @@
 const flareSpan = document.querySelector('.flare span');
 
-let pointerX, pointerY;
+let pointerX, pointerY, x, y;
 
-function updatePointerPosition(event) {
-  let x = event.pageX;
-  let y = event.pageY;
+const percentage = (partialValue, totalValue) => {
+  return (100 * partialValue) / totalValue;
+};
 
-  pointerX = (x / document.body.offsetWidth) * 100;
-  pointerY = (y / document.body.offsetHeight) * 100;
-}
+const movePointer = () => {
+  x = percentage(pointerX, document.body.offsetWidth);
+  y = percentage(pointerY, document.body.offsetHeight);
+};
 
-function updateFlareProperties() {
-  if (!(pointerX && pointerY)) return;
+// GSAP's 'requestAnimationFrame' falls back to set timeout
+gsap.ticker.add(movePointer);
 
-  flareSpan.style.setProperty('--pointer-x', `${pointerX}%`);
-  flareSpan.style.setProperty('--pointer-y', `${pointerY}%`);
+const updateFlareProperties = () => {
+  gsap.set(flareSpan, {
+    '--pointer-y': `${y}%`,
+    '--pointer-x': `${x}%`,
+  });
+};
 
-  console.log({ x: pointerX, y: pointerY });
-}
+const updateMouseCoords = (event) => {
+  pointerX = event.pageX;
+  pointerY = event.pageY;
+};
 
-// GSAP's RAF(requestAnimationFrame), falls back to set timeout
-//gsap.ticker.add(updatePointerPosition, updateFlareProperties);
-
-document.addEventListener('pointermove', updatePointerPosition);
-document.addEventListener('mousewheel', updatePointerPosition);
+['pointermove', 'mousewheel'].forEach((event) => {
+  document.addEventListener(event, updateMouseCoords);
+});
 
 // Only set properties each time the animation starts over
 flareSpan.addEventListener('animationiteration', updateFlareProperties);

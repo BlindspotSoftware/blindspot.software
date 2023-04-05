@@ -70,12 +70,6 @@ $gorko-config: (
           'color': $light-colors,
         ),
       ),
-      'dark': (
-        'prefers-color-scheme': 'dark',
-        'tokens': (
-          'color': $dark-colors,
-        ),
-      ),
       'dark-toggle': (
         'prefix': ':root[data-color-theme="dark"]',
         'tokens': (

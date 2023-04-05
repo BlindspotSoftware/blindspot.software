@@ -1,3 +1,5 @@
+import gsap from 'gsap';
+
 const flareSpan = document.querySelector('.flare span');
 
 let pointerX, pointerY, x, y;

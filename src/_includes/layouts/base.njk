@@ -41,10 +41,8 @@
 
     {% include "partials/site-foot.njk" %}
 
-    <script src="/js/gsap.min.js"></script>
-    <script src="/js/ScrollTrigger.min.js"></script>
-    <script src="/js/ScrollAnimation.js"></script>
-    <script src="/js/darkLightSwitch.js"></script>
-    <script src="/js/pulseAnimation.js"></script>
+    {% script src = "ScrollAnimation.js" %}
+    {% script src = "darkLightSwitch.js" %}
+    {% script src = "pulseAnimation.js" %}
   </body>
 </html>

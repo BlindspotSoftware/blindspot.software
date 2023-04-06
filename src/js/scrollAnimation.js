@@ -15,6 +15,8 @@ headlines.forEach((headline) => {
       toggleActions: 'play complete none reset',
     },
     duration: 0.5,
+    ease: 'elastic.in(2, 1)',
+    // Closed state
     // Closed state
     '--gap': '0',
   });

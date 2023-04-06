@@ -9,6 +9,10 @@
   --color-mode: 'light';
 }
 
+html {
+  font-size: clamp(100%, 100%/3 + 0.67vw, 150%);
+}
+
 body {
   position: relative;
   @include apply-utility('font', 'base');

@@ -1,10 +1,27 @@
 .site-foot {
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: var(--space-m);
   padding: var(--space-m);
+  background-color: var(--color-text);
+  color: var(--color-bg);
+
+  &::before {
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 2;
+    inset: 0;
+    transform: translateY(-99.9%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 720' %3E%3Cpath fill='%23111121' d='M0 0v720h720C322.35 720 0 397.65 0 0ZM720 720h720V0c0 397.65-322.35 720-720 720Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: clamp(100%, -185.294rem + 305.88vw, 999rem) auto;
+    background-position: center bottom;
+  }
 
   &__nav {
     line-height: 1.75;
@@ -31,7 +48,7 @@
       text-decoration: none;
 
       &:hover {
-        color: var(--color-turquoise);
+        color: var(--color-violet);
         transition: color 0.075s ease;
       }
 

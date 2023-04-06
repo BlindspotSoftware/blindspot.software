@@ -1,5 +1,7 @@
 .site-head {
   display: flex;
+  max-width: 125rem;
+  margin-inline: auto;
   justify-content: center;
   align-items: flex-start;
   gap: var(--space-xs);
@@ -28,7 +30,7 @@
     text-decoration: none;
 
     &:hover:not(.site-head__logo) {
-      color: var(--color-turquoise);
+      color: var(--color-violet);
       transition: color 0.075s ease;
     }
 

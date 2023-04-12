@@ -1,3 +1,9 @@
+:root[data-color-theme='dark'] {
+  .site-foot::before {
+    display: none;
+  }
+}
+
 .site-foot {
   display: flex;
   position: relative;
@@ -16,6 +22,7 @@
     width: 100%;
     aspect-ratio: 2;
     inset: 0;
+    -webkit-transform: translateY(-99.9%);
     transform: translateY(-99.9%);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 720' %3E%3Cpath fill='%23111121' d='M0 0v720h720C322.35 720 0 397.65 0 0ZM720 720h720V0c0 397.65-322.35 720-720 720Z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;

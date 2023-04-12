@@ -2,7 +2,8 @@
     <div class="person">
         {% picture class="person__portrait | unselectable", src=person.data.imageUrl, alt=""%}
         <div class="person__overlay" tabindex="0">
-            <p class="weight-bold">{{ person.data.name }}</p>
+            <span class="weight-bold">{{ person.data.firstName }}</span>
+            <span class="weight-bold">{{ person.data.lastName }}</span>
             <ul class="person__social-icons | cluster" style="--cluster-justification: center; --cluster-gap: var(--space-2xs)" role="list">
                 {% for socialItem in person.data.socials %}
                     <li>

@@ -1,22 +1,17 @@
 const STORAGE_KEY = 'user-color-scheme';
-const COLOR_MODE_KEY = '--color-mode';
+const DEFAULT_MODE = 'light';
 
+const userToggle = document.querySelector('.user-toggle');
 const modeToggleButton = document.querySelector('.js-mode-toggle');
 const modeToggleText = document.querySelector('.js-mode-toggle-text');
 const modeStatusElement = document.querySelector('.js-mode-status');
 const pcbLayer = document.querySelector('.pcb-layer');
 
-const getCSSCustomProp = (propKey) => {
-  let response = getComputedStyle(document.documentElement).getPropertyValue(
-    propKey
-  );
-
-  if (response.length) {
-    response = response.replace(/\"/g, '').trim();
-  }
-
-  return response;
-};
+// Hide user toggle on touch devices
+if (window.matchMedia('(hover: none), (pointer: coarse)').matches) {
+  userToggle.hidden = true;
+  userToggle.ariaHidden = true;
+}
 
 const applySetting = (passedSetting) => {
   let currentSetting = passedSetting || localStorage.getItem(STORAGE_KEY);
@@ -25,7 +20,7 @@ const applySetting = (passedSetting) => {
     document.documentElement.setAttribute('data-color-theme', currentSetting);
     setButtonLabelAndStatus(currentSetting);
   } else {
-    setButtonLabelAndStatus(getCSSCustomProp(COLOR_MODE_KEY));
+    setButtonLabelAndStatus(DEFAULT_MODE);
   }
 };
 
@@ -53,8 +48,7 @@ const toggleSetting = () => {
 
   switch (currentSetting) {
     case null:
-      currentSetting =
-        getCSSCustomProp(COLOR_MODE_KEY) === 'dark' ? 'light' : 'dark';
+      currentSetting = DEFAULT_MODE;
       break;
     case 'light':
       currentSetting = 'dark';

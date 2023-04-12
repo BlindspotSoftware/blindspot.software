@@ -4,9 +4,9 @@
   "description": "Boilerplate for basic 11ty page",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "npx sass src/scss:src/_includes/css && concurrently 'npx sass src/scss:src/_includes/css --watch' 'npx eleventy --serve'",
-    "production": "npx sass src/scss:src/_includes/css && NODE_ENV=production npx eleventy",
-    "start-production": "npx sass src/scss:src/_includes/css && NODE_ENV=production concurrently 'npx sass src/scss:src/_includes/css --watch' 'npx eleventy --serve'"
+    "start": "npx sass --no-source-map src/scss:src/_includes/css && concurrently 'npx sass --no-source-map src/scss:src/_includes/css --watch' 'npx eleventy --serve'",
+    "production": "npx --no-source-map src/scss:src/_includes/css && NODE_ENV=production npx eleventy",
+    "start-production": "npx sass --no-source-map src/scss:src/_includes/css && NODE_ENV=production concurrently 'npx sass --no-source-map src/scss:src/_includes/css --watch' 'npx eleventy --serve'"
   },
   "keywords": [],
   "author": "",

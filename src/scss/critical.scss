@@ -4,11 +4,7 @@
 @import '../../node_modules/gorko/gorko.scss';
 @import 'reset';
 
-// Global styles start
-:root {
-  --color-mode: 'light';
-}
-
+// Global styles
 html {
   font-size: clamp(100%, 100%/3 + 0.67vw, 150%);
 }

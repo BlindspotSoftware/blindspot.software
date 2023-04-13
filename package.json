@@ -5,7 +5,7 @@
   "main": ".eleventy.js",
   "scripts": {
     "start": "npx sass --no-source-map src/scss:src/_includes/css && concurrently 'npx sass --no-source-map src/scss:src/_includes/css --watch' 'npx eleventy --serve'",
-    "production": "npx --no-source-map src/scss:src/_includes/css && NODE_ENV=production npx eleventy",
+    "production": "npx sass --no-source-map src/scss:src/_includes/css && NODE_ENV=production npx eleventy",
     "start-production": "npx sass --no-source-map src/scss:src/_includes/css && NODE_ENV=production concurrently 'npx sass --no-source-map src/scss:src/_includes/css --watch' 'npx eleventy --serve'"
   },
   "keywords": [],

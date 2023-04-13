@@ -69,4 +69,4 @@ modeToggleButton.addEventListener('click', (evt) => {
   applySetting(toggleSetting());
 });
 
-applySetting();
+applySetting(toggleSetting());

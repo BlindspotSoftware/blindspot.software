@@ -4,6 +4,7 @@
         <div class="person__overlay" tabindex="0">
             <span class="weight-bold">{{ person.data.firstName }}</span>
             <span class="weight-bold">{{ person.data.lastName }}</span>
+            <span class="person__title | text-step-0 weight-light">{{ person.data.title }}</span>
             <ul class="person__social-icons | cluster" style="--cluster-justification: center; --cluster-gap: var(--space-2xs)" role="list">
                 {% for socialItem in person.data.socials %}
                     <li>

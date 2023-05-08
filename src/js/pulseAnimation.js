@@ -3,6 +3,8 @@ import gsap from 'gsap';
 const flareSpan = document.querySelector('.flare span');
 
 let pointerX, pointerY, x, y;
+let initialMouseMove = true;
+let timer;
 
 const percentage = (partialValue, totalValue) => {
   return (100 * partialValue) / totalValue;
@@ -32,5 +34,39 @@ const updateMouseCoords = (event) => {
   document.addEventListener(event, updateMouseCoords);
 });
 
-// Only set properties each time the animation starts over
-flareSpan.addEventListener('animationiteration', updateFlareProperties);
+// Only play animation if mouse is moving
+window.addEventListener('mousemove', (event) => {
+  if (initialMouseMove) {
+    initialMouseMove = false;
+
+    updateFlareProperties();
+
+    gsap.fromTo(
+      flareSpan,
+      {
+        backgroundSize: '0% 0%',
+        opacity: 1,
+      },
+      {
+        backgroundSize: '200% 200%',
+        opacity: 0,
+        duration: 5,
+        ease: 'power3',
+      }
+    );
+  }
+
+  function mouseStopped() {
+    initialMouseMove = true;
+
+    gsap.to(flareSpan, {
+      backgroundSize: '0% 0%',
+      duration: 0,
+      opacity: 0,
+      ease: 'none',
+    });
+  }
+
+  clearTimeout(timer);
+  timer = setTimeout(mouseStopped, 1500);
+});

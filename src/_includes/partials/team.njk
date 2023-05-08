@@ -1,4 +1,4 @@
-{% for person in collections.team %}
+{% for person in collections.team | sortByOrder %}
     <div class="person">
         {% picture class="person__portrait | unselectable", src=person.data.imageUrl, alt=""%}
         <div class="person__overlay" tabindex="0">

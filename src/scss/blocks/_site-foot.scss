@@ -44,7 +44,7 @@
       width: 7rem;
     }
 
-    @media (min-width: 32em) {
+    @media (width >= 32em) {
       flex: initial;
       order: initial;
     }

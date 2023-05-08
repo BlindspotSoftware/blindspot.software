@@ -6,6 +6,7 @@
     width: clamp(10rem, 8.286rem + 8.57vw, 16rem);
     height: auto;
     aspect-ratio: 1;
+    margin-inline: auto;
     border-radius: 50%;
   }
 
@@ -44,7 +45,7 @@
       margin-bottom: var(--space-l);
       opacity: 1;
       background-color: unset;
-      color: var(--color-white);
+      color: var(--color-text);
       border-radius: unset;
     }
   }

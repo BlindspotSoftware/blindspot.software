@@ -3,9 +3,8 @@ const buildSystem = require('@cagov/11ty-build-system');
 const { globPlugin } = require('esbuild-plugin-glob');
 
 // Filters
-const readableDate = require('./src/filters/readableDate.js');
-const w3DateFilter = require('./src/filters/w3-date-filter.js');
-const markdownFilter = require('./src/filters/markdown-filter.js');
+const markdownFilter = require('./src/filters/markdownFilter.js');
+const sortByOrder = require('./src/filters/sortByOrder.js');
 
 // Plugins
 const svgSprite = require('eleventy-plugin-svg-sprite');
@@ -24,12 +23,8 @@ module.exports = (config) => {
   config.addWatchTarget('./src/js/');
 
   // Add filters
-  config.addFilter('readableDate', readableDate);
-  config.addFilter('w3DateFilter', w3DateFilter);
-  config.addFilter('limit', function (arr, limit) {
-    return arr.slice(0, limit);
-  });
   config.addFilter('markdownFilter', markdownFilter);
+  config.addFilter('sortByOrder', sortByOrder);
 
   // Add Shortcodes
   config.addShortcode('icon', require('./src/shortcodes/icon.js'));

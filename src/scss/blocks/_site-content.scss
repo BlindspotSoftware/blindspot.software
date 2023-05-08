@@ -1,16 +1,21 @@
 .site-content {
   text-align: center;
 
-  h1,
+  /*   h1,
   h2,
   h3 {
     text-transform: lowercase;
-  }
+  } */
 
   #product,
   #about,
   #contact {
-    scroll-margin-top: var(--space-l);
+    scroll-margin-top: var(--space-m-l);
+  }
+
+  #about > .cluster {
+    max-width: 75%;
+    margin-inline: auto;
   }
 
   .text-block {
@@ -103,7 +108,14 @@
     margin-inline: auto;
   }
 
-  .placeholder {
-    width: 13rem;
+  .value {
+    max-width: min-content;
+
+    &__icon {
+      width: clamp(5rem, 4.143rem + 4.29vw, 8rem);
+      max-width: fit-content;
+      height: auto;
+      margin-inline: auto;
+    }
   }
 }

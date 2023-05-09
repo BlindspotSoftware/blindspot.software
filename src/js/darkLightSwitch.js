@@ -1,5 +1,4 @@
 const STORAGE_KEY = 'user-color-scheme';
-const DEFAULT_MODE = 'light';
 
 const userToggle = document.querySelector('.user-toggle');
 const modeToggleButton = document.querySelector('.js-mode-toggle');
@@ -20,7 +19,7 @@ const applySetting = (passedSetting) => {
     document.documentElement.setAttribute('data-color-theme', currentSetting);
     setButtonLabelAndStatus(currentSetting);
   } else {
-    setButtonLabelAndStatus(DEFAULT_MODE);
+    setButtonLabelAndStatus('light');
   }
 };
 
@@ -48,7 +47,7 @@ const toggleSetting = () => {
 
   switch (currentSetting) {
     case null:
-      currentSetting = DEFAULT_MODE;
+      currentSetting = 'dark';
       break;
     case 'light':
       currentSetting = 'dark';
@@ -69,5 +68,4 @@ modeToggleButton.addEventListener('click', (evt) => {
   applySetting(toggleSetting());
 });
 
-applySetting(DEFAULT_MODE);
-localStorage.setItem(STORAGE_KEY, currentSetting);
+applySetting();

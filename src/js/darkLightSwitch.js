@@ -69,4 +69,5 @@ modeToggleButton.addEventListener('click', (evt) => {
   applySetting(toggleSetting());
 });
 
-applySetting(toggleSetting());
+applySetting(DEFAULT_MODE);
+localStorage.setItem(STORAGE_KEY, currentSetting);

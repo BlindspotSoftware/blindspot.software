@@ -1,16 +1,26 @@
 .site-content {
   text-align: center;
 
-  /*   h1,
-  h2,
-  h3 {
-    text-transform: lowercase;
-  } */
-
   #product,
   #about,
   #contact {
     scroll-margin-top: var(--space-m-l);
+  }
+
+  #service > .cluster {
+    flex-direction: column;
+    align-items: center;
+
+    @media (width >= 32em) {
+      flex-direction: initial;
+    }
+
+    .vertical-line {
+      background-color: var(--color-violet);
+      height: var(--space-m);
+      width: 4px;
+      margin-inline: auto;
+    }
   }
 
   #about > .cluster {

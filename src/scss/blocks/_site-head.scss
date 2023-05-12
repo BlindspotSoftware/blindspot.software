@@ -39,4 +39,9 @@
       outline: 2px dashed var(--color-orange);
     }
   }
+
+  button:focus-visible {
+    outline-offset: 4px;
+    outline: 2px dashed var(--color-orange);
+  }
 }

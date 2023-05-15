@@ -2,8 +2,6 @@ const STORAGE_KEY = 'user-color-scheme';
 
 const userToggle = document.querySelector('.user-toggle');
 const modeToggleButton = document.querySelector('.js-mode-toggle');
-const modeToggleText = document.querySelector('.js-mode-toggle-text');
-const modeStatusElement = document.querySelector('.js-mode-status');
 const pcbLayer = document.querySelector('.pcb-layer');
 
 // Hide user toggle on touch devices
@@ -24,20 +22,13 @@ const applySetting = (passedSetting) => {
 };
 
 const setButtonLabelAndStatus = (currentSetting) => {
-  modeToggleText.innerText = `Enable ${
-    currentSetting === 'dark' ? 'light' : 'dark'
-  } mode`;
-  modeStatusElement.innerText = `Color mode is now "${currentSetting}"`;
-
   modeToggleButton.setAttribute(
     'aria-checked',
     `${currentSetting === 'dark' ? true : false}`
   );
   if (currentSetting === 'dark') {
-    modeToggleButton.classList.add('is-switched');
     pcbLayer.classList.add('is-active');
   } else {
-    modeToggleButton.classList.remove('is-switched');
     pcbLayer.classList.remove('is-active');
   }
 };

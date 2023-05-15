@@ -2,8 +2,10 @@ const Image = require('@11ty/eleventy-img');
 async function pictureShortcode(picture) {
   let src = picture.src ? picture.src : '';
   let alt = picture.alt ? picture.alt : '';
-  let widths = picture.widths ? picture.widths : [300, 600];
-  let sizes = picture.sizes ? picture.sizes : '100vw';
+  let widths = picture.widths ? picture.widths : [200, 300];
+  let sizes = picture.sizes
+    ? picture.sizes
+    : 'clamp(10rem, 8.286rem + 8.57vw, 16rem) auto';
   let imgClass = picture.class ? picture.class : '';
   let formats = picture.formats ? picture.formats : ['webp', 'jpg'];
   let loading = picture.loading ? picture.loading : 'lazy';

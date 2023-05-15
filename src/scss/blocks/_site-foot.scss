@@ -50,19 +50,17 @@
     }
   }
 
-  li {
-    a {
-      text-decoration: none;
+  a {
+    text-decoration: none;
 
-      &:hover {
-        color: var(--color-violet);
-        transition: color 0.075s ease;
-      }
+    &:hover {
+      color: var(--color-violet);
+      transition: color 0.075s ease;
+    }
 
-      &:focus-visible {
-        outline-offset: 3px;
-        outline: 2px dashed var(--color-orange);
-      }
+    &:focus-visible {
+      outline-offset: 3px;
+      outline: 2px dashed var(--color-orange);
     }
   }
 }

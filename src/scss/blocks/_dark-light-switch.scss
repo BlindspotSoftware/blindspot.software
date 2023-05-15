@@ -51,7 +51,7 @@
   }
 }
 
-.toggle-button.is-switched {
+.toggle-button[aria-checked='true'] {
   background-size: 28%, 0%;
 
   &:active {

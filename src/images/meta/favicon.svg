@@ -1,6 +1,12 @@
-<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-	<path d="M21.3,44V22.7H0C0.2,34.3,9.7,43.8,21.3,44z" fill="#24deac"/>
-	<path d="M22.6,0c0.2,11.6,9.7,21.2,21.3,21.3V0H22.6z" fill="#24deac"/>
-	<path d="M0,21.3h21.3l0-21.3h0C9.7,0.2,0.2,9.7,0,21.3z" fill="#24deac"/>
-	<path d="M22.6,44c11.6-0.2,21.1-9.7,21.3-21.3H22.6L22.6,44z" fill="#24deac"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="none">
+<style>
+	path {
+		fill: #111121;
+	}
+	@media (prefers-color-scheme: dark) {
+		path {
+			fill: #f2f2f2;
+		}
+	}
+</style>
+<path fill="#24deac" d="M21.3 44V22.7H0C.2 34.3 9.7 43.8 21.3 44zM22.6 0c.2 11.6 9.7 21.2 21.3 21.3V0H22.6zM0 21.3h21.3V0C9.7.2.2 9.7 0 21.3zM22.6 44c11.6-.2 21.1-9.7 21.3-21.3H22.6V44z"/></svg>

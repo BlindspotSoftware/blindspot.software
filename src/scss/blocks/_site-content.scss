@@ -14,13 +14,6 @@
     @media (width >= 32em) {
       flex-direction: initial;
     }
-
-    .vertical-line {
-      background-color: var(--color-violet);
-      height: var(--space-m);
-      width: 4px;
-      margin-inline: auto;
-    }
   }
 
   #about > .cluster {
@@ -126,6 +119,16 @@
       max-width: fit-content;
       height: auto;
       margin-inline: auto;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        background-color: var(--color-violet);
+        height: var(--space-m);
+        width: 4px;
+        margin-inline: auto;
+        margin-top: var(--space-xs);
+      }
     }
   }
 }

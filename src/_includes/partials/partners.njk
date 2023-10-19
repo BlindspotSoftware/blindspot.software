@@ -1,0 +1,13 @@
+{% for partner in collections.partners | sortByOrder %}
+    <div class="person">
+        {% if partner.data.size == "s" %}
+        {% picture class="partner__portrait_s | unselectable", src=partner.data.imageUrl, alt=""%}
+        {% else %}
+        {% picture class="partner__portrait_m | unselectable", src=partner.data.imageUrl, alt=""%}
+        {% endif %}
+        <div class="partner__overlay" tabindex="0">
+            <span class="weight-bold"><a href="{{ partner.data.url }}" target="_blank">{{ partner.data.name }}</a></span>
+            <span class="person__title | text-step-0 weight-light">{{ partner.data.subtitle }}</span>
+        </div>
+    </div>
+{% endfor %}

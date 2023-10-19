@@ -1,10 +1,13 @@
 {
-  "name": "eleventy-starter",
+  "name": "blindspot-software",
   "version": "1.0.0",
-  "description": "Boilerplate for basic 11ty page",
+  "homepage": "https://BlindspotSoftware.github.io/blindspot.software",
+  "description": "Homepage for blindspot.software",
   "main": ".eleventy.js",
   "scripts": {
     "start": "npx sass --no-source-map src/scss:src/_includes/css && concurrently 'npx sass --no-source-map src/scss:src/_includes/css --watch' 'npx eleventy --serve'",
+    "predeploy": "npx sass --no-source-map src/scss:src/_includes/css && NODE_ENV=production npx eleventy",
+    "deploy": "gh-pages -d dist",
     "production": "npx sass --no-source-map src/scss:src/_includes/css && NODE_ENV=production npx eleventy",
     "start-production": "npx sass --no-source-map src/scss:src/_includes/css && NODE_ENV=production concurrently 'npx sass --no-source-map src/scss:src/_includes/css --watch' 'npx eleventy --serve'"
   },

@@ -1,1 +1,50 @@
-var r="user-color-scheme",a=document.querySelector(".user-toggle"),s=document.querySelector(".js-mode-toggle"),o=document.querySelector(".pcb-layer");window.matchMedia("(hover: none), (pointer: coarse)").matches&&(a.hidden=!0,a.ariaHidden=!0);var l=e=>{let t=e||localStorage.getItem(r);t?(document.documentElement.setAttribute("data-color-theme",t),c(t)):c("light")},c=e=>{s.setAttribute("aria-checked",`${e==="dark"}`),e==="dark"?o.classList.add("is-active"):o.classList.remove("is-active")},n=()=>{let e=localStorage.getItem(r);switch(e){case null:e="dark";break;case"light":e="dark";break;case"dark":e="light";break}return localStorage.setItem(r,e),e};s.addEventListener("click",e=>{e.preventDefault(),l(n())});l();
+// src/js/darkLightSwitch.js
+var STORAGE_KEY = "user-color-scheme";
+var userToggle = document.querySelector(".user-toggle");
+var modeToggleButton = document.querySelector(".js-mode-toggle");
+var pcbLayer = document.querySelector(".pcb-layer");
+if (window.matchMedia("(hover: none), (pointer: coarse)").matches) {
+  userToggle.hidden = true;
+  userToggle.ariaHidden = true;
+}
+var applySetting = (passedSetting) => {
+  let currentSetting = passedSetting || localStorage.getItem(STORAGE_KEY);
+  if (currentSetting) {
+    document.documentElement.setAttribute("data-color-theme", currentSetting);
+    setButtonLabelAndStatus(currentSetting);
+  } else {
+    setButtonLabelAndStatus("light");
+  }
+};
+var setButtonLabelAndStatus = (currentSetting) => {
+  modeToggleButton.setAttribute(
+    "aria-checked",
+    `${currentSetting === "dark" ? true : false}`
+  );
+  if (currentSetting === "dark") {
+    pcbLayer.classList.add("is-active");
+  } else {
+    pcbLayer.classList.remove("is-active");
+  }
+};
+var toggleSetting = () => {
+  let currentSetting = localStorage.getItem(STORAGE_KEY);
+  switch (currentSetting) {
+    case null:
+      currentSetting = "dark";
+      break;
+    case "light":
+      currentSetting = "dark";
+      break;
+    case "dark":
+      currentSetting = "light";
+      break;
+  }
+  localStorage.setItem(STORAGE_KEY, currentSetting);
+  return currentSetting;
+};
+modeToggleButton.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  applySetting(toggleSetting());
+});
+applySetting();

@@ -13,7 +13,7 @@ permalink: /imprint/
 Kortumstrasse 19-21<br/>
 44787 Bochum</p>
 
-<p>Handelsregister: TBD<br/>
+<p>Handelsregister: HRB 21040<br/>
 Registergericht: Bochum</p>
 
 <p>
@@ -33,7 +33,7 @@ E-Mail: hello@blindspot.software</p>
 <div class="stack-xs">
     <h2>Umsatzsteuer-ID</h2>
     <p>Umsatzsteuer-Identifikationsnummer gem&auml;&szlig; &sect; 27 a Umsatzsteuergesetz:<br/>
-TBD</p>
+DE363898016</p>
 </div>
 
 <div class="stack-xs">

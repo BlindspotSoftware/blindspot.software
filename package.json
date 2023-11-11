@@ -7,7 +7,7 @@
   "scripts": {
     "start": "npx sass --no-source-map src/scss:src/_includes/css && concurrently 'npx sass --no-source-map src/scss:src/_includes/css --watch' 'npx eleventy --serve'",
     "predeploy": "npx sass --no-source-map src/scss:src/_includes/css && NODE_ENV=production npx eleventy",
-    "deploy": "gh-pages -d dist",
+    "deploy": "echo 'blindspot.software' > ./dist/CNAME && touch ./dist/.nojekyll && gh-pages -d dist -t true",
     "production": "npx sass --no-source-map src/scss:src/_includes/css && NODE_ENV=production npx eleventy",
     "start-production": "npx sass --no-source-map src/scss:src/_includes/css && NODE_ENV=production concurrently 'npx sass --no-source-map src/scss:src/_includes/css --watch' 'npx eleventy --serve'"
   },

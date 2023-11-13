@@ -16,7 +16,6 @@ const updateMouseCoords = (event) => {
 ['pointermove', 'wheel'].forEach((event) => {
   document.addEventListener(event, (e) => {
     updateMouseCoords(e);
-    console.log(e);
   });
 });
 

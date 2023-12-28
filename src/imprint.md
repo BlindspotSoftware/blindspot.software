@@ -9,7 +9,7 @@ permalink: /imprint/
 
 <div class="stack-xs">
     <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
-    <p>BlindSpot Software GmbH (in Gr&uuml;ndung)<br/>
+    <p>BlindSpot Software GmbH<br/>
 Kortumstrasse 19-21<br/>
 44787 Bochum</p>
 

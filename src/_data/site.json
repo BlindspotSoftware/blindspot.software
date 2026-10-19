@@ -3,5 +3,5 @@
   "authorName": "BlindSpot Software GmbH",
   "url": "https://blindspot.software",
   "authorEmail": "hello@blindspot.software",
-  "metaDesc": "Fast to the future: Accelerate your firmware development"
+  "metaDesc": "BlindSpot builds FirmwareCI: continuous integration for firmware, on real hardware."
 }

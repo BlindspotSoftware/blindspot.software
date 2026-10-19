@@ -1,0 +1,35 @@
+{#
+  FirmwareCI first. Blindspot's product leads the page and sends visitors
+  straight to firmware-ci.com — e.g. people who saw FirmwareCI at a booth and
+  kept a business card with the blindspot.software address.
+#}
+<section class="fwci-hero" id="product" aria-labelledby="fwci-title">
+  <div class="fwci-hero__copy">
+    <p class="fwci-hero__eyebrow">blindspot builds</p>
+
+    <h1 class="fwci-hero__title" id="fwci-title">
+      <svg class="fwci-hero__logo" viewBox="0 0 102 62" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M20.954 0C9.381 0 0 9.382 0 20.954v40.41h1.5c11.07 0 20.134-8.584 20.901-19.457h.053v-.049c7.806-.552 14.43-5.38 17.546-12.157v12.206h.057c.767 10.875 9.832 19.457 20.901 19.457h1.5V51.22c3.668 6.08 10.336 10.144 17.954 10.144h1.5v-10.14c3.668 6.077 10.336 10.14 17.952 10.14h1.5v-40.41C101.364 9.381 91.982 0 80.41 0h-1.5v10.142C75.241 4.064 68.573 0 60.957 0h-1.5v10.15C55.855 4.174 49.357.144 41.906.003V0zm-1.501 38.907V22.454H3v16.453zm0-19.453V3.062c-8.72.721-15.67 7.673-16.391 16.392zm19.391 3.003c-.72 8.719-7.672 15.67-16.39 16.392V22.457zm0-19.457c-.72 8.72-7.672 15.673-16.39 16.393V3zM40 10.245v9.212h-8.24A21.04 21.04 0 0 0 40 10.245m38.91 12.209v16.453H62.458V22.454zm3.002 16.453h16.452V22.454H81.912zM81.91 3.062c8.72.72 15.671 7.672 16.392 16.392H81.91zm16.454 55.24c-8.72-.72-15.671-7.672-16.392-16.392h16.392zm-38.906 0c-8.72-.72-15.671-7.672-16.392-16.392h16.392zm19.454 0c-8.72-.72-15.671-7.672-16.392-16.392h16.392zm-.062-38.848H62.458V3.062c8.718.721 15.67 7.672 16.392 16.392M43 3.062c8.72.72 15.671 7.672 16.392 16.392H43zm0 35.845V22.454h16.454v16.453zM3 58.302V41.91h16.392C18.671 50.63 11.72 57.582 3 58.303"/></svg>
+      FirmwareCI
+    </h1>
+
+    <p class="fwci-hero__tagline">
+      <svg class="fwci-hero__arrow" viewBox="0 0 122 67" aria-hidden="true" focusable="false"><path fill="var(--color-orange)" d="M88.2,0l-5,5l28.3,28.3L83.3,61.5l5,5l33.2-33.2l0,0l0,0L88.2,0z M0,44v-7h88v7H0z M0,23v7h88v-7H0z"/></svg>
+      CI for firmware, on real hardware.
+    </p>
+
+    <p class="fwci-hero__text">
+      Every commit of your firmware flashed, booted and tested on real boards, with the result on your
+      pull request. FirmwareCI is what we build.
+    </p>
+
+    <div class="fwci-hero__actions">
+      <a class="btn" href="https://firmware-ci.com/?ref=blindspot.software">firmware-ci.com</a>
+      <a class="btn btn--outline" href="https://app.firmware-ci.com/public-orgs">see it in action</a>
+    </div>
+  </div>
+
+  <figure class="fwci-hero__shot">
+    {% picture src="./src/images/firmwareci-dashboard.webp", alt="The FirmwareCI dashboard: job requests with success rates and per-branch test history.", widths=[700, 1100, 1697], formats=["webp"], sizes="(width >= 64em) 56rem, 100vw", loading="eager", class="fwci-hero__img fwci-hero__img--light" %}
+    {% picture src="./src/images/firmwareci-dashboard-dark.webp", alt="", widths=[700, 1100, 1697], formats=["webp"], sizes="(width >= 64em) 56rem, 100vw", loading="lazy", class="fwci-hero__img fwci-hero__img--dark" %}
+  </figure>
+</section>
